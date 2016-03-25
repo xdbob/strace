@@ -282,6 +282,10 @@ ioctl_decode(struct tcb *tcp)
 	case 0x94:
 		return btrfs_ioctl(tcp, code, arg);
 #endif
+#if defined(HAVE_LINUX_ANDROID_BINDER_H) || defined(__ANDROID__)
+	case 'b':
+		return binder_ioctl(tcp, code, arg);
+#endif
 	default:
 		break;
 	}

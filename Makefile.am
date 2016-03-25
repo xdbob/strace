@@ -78,6 +78,7 @@ strace_SOURCES =	\
 	affinity.c	\
 	aio.c		\
 	alpha.c		\
+	binder.c	\
 	bjm.c		\
 	block.c		\
 	bpf.c		\
