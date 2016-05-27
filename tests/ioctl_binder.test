@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Check binder's ioctl decoding.
+
+. "${srcdir=.}/init.sh"
+
+run_prog > /dev/null
+run_strace -a16 -v -eioctl $args > "$EXP"
+check_prog grep
+grep -v '^ioctl([012],' < "$LOG" > "$OUT"
+match_diff "$OUT" "$EXP"
+
+rm -f "$EXP" "$OUT"
+
+exit 0

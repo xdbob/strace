@@ -98,6 +98,7 @@ ioctl_evdev-v
 ioctl_mtd
 ioctl_rtc
 ioctl_rtc-v
+ioctl_binder
 ioctl_uffdio
 ioctl_v4l2
 ioperm
