@@ -1,5 +1,9 @@
-BINDER_TYPE_BINDER
-BINDER_TYPE_WEAK_BINDER
-BINDER_TYPE_HANDLE
-BINDER_TYPE_WEAK_HANDLE
-BINDER_TYPE_FD
+/*
+ * These values are defined as an enum in linux/android/binder.h and must be
+ * defined here because xlat is unable to fetch them.
+ */
+BINDER_TYPE_BINDER B_PACK_CHARS('s', 'b', '*', B_TYPE_LARGE)
+BINDER_TYPE_WEAK_BINDER B_PACK_CHARS('w', 'b', '*', B_TYPE_LARGE)
+BINDER_TYPE_HANDLE B_PACK_CHARS('s', 'h', '*', B_TYPE_LARGE)
+BINDER_TYPE_WEAK_HANDLE B_PACK_CHARS('w', 'h', '*', B_TYPE_LARGE)
+BINDER_TYPE_FD B_PACK_CHARS('f', 'd', '*', B_TYPE_LARGE)

@@ -1,4 +1,8 @@
-TF_ONE_WAY
-TF_ROOT_OBJECT
-TF_STATUS_CODE
-TF_ACCEPT_FDS
+/*
+ * These values are defined as an enum in linux/android/binder.h and must be
+ * defined here because xlat is unable to fetch them.
+ */
+TF_ONE_WAY 0x01
+TF_ROOT_OBJECT 0x04
+TF_STATUS_CODE 0x08
+TF_ACCEPT_FDS 0x10

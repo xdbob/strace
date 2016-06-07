@@ -1,17 +1,21 @@
-BC_TRANSACTION
-BC_REPLY
-BC_ACQUIRE_RESULT
-BC_FREE_BUFFER
-BC_INCREFS
-BC_ACQUIRE
-BC_RELEASE
-BC_DECREFS
-BC_INCREFS_DONE
-BC_ACQUIRE_DONE
-BC_ATTEMPT_ACQUIRE
-BC_REGISTER_LOOPER
-BC_ENTER_LOOPER
-BC_EXIT_LOOPER
-BC_REQUEST_DEATH_NOTIFICATION
-BC_CLEAR_DEATH_NOTIFICATION
-BC_DEAD_BINDER_DONE
+/*
+ * These values are defined as an enum in linux/android/binder.h and must be
+ * defined here because xlat is unable to fetch them.
+ */
+BC_TRANSACTION _IOW('c', 0, struct binder_transaction_data)
+BC_REPLY _IOW('c', 1, struct binder_transaction_data)
+BC_ACQUIRE_RESULT _IOW('c', 2, __s32)
+BC_FREE_BUFFER _IOW('c', 3, binder_uintptr_t)
+BC_INCREFS _IOW('c', 4, __u32)
+BC_ACQUIRE _IOW('c', 5, __u32)
+BC_RELEASE _IOW('c', 6, __u32)
+BC_DECREFS _IOW('c', 7, __u32)
+BC_INCREFS_DONE _IOW('c', 8, struct binder_ptr_cookie)
+BC_ACQUIRE_DONE _IOW('c', 9, struct binder_ptr_cookie)
+BC_ATTEMPT_ACQUIRE _IOW('c', 10, struct binder_pri_desc)
+BC_REGISTER_LOOPER _IO('c', 11)
+BC_ENTER_LOOPER _IO('c', 12)
+BC_EXIT_LOOPER _IO('c', 13)
+BC_REQUEST_DEATH_NOTIFICATION _IOW('c', 14, struct binder_handle_cookie)
+BC_CLEAR_DEATH_NOTIFICATION _IOW('c', 15, struct binder_handle_cookie)
+BC_DEAD_BINDER_DONE _IOW('c', 16, binder_uintptr_t)
