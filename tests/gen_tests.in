@@ -130,6 +130,7 @@ io_uring_enter	-y
 io_uring_register	-y
 io_uring_setup	-a26 -y
 ioctl_block	+ioctl.test
+ioctl_binder	+ioctl.test -v
 ioctl_dm	+ioctl.test -s9
 ioctl_dm-v	+ioctl.test -v -s9
 ioctl_evdev	+ioctl.test

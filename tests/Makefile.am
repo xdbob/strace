@@ -98,6 +98,7 @@ check_PROGRAMS = $(PURE_EXECUTABLES) \
 	gettid \
 	inject-nf \
 	int_0x80 \
+	ioctl_binder \
 	ioctl_dm-v \
 	ioctl_evdev-success \
 	ioctl_evdev-success-v \

@@ -157,6 +157,7 @@ io_uring_enter
 io_uring_register
 io_uring_setup
 ioctl
+ioctl_binder
 ioctl_block
 ioctl_dm
 ioctl_dm-v
