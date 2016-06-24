@@ -582,7 +582,16 @@ AC_CHECK_HEADERS([linux/android/binder.h], [[ #include <sys/types.h>
 		BR_FINISHED,
 		BR_DEAD_BINDER,
 		BR_CLEAR_DEATH_NOTIFICATION_DONE,
-		BR_FAILED_REPLY]),,,[ #include <sys/types.h>
+		BR_FAILED_REPLY,
+		TF_ONE_WAY,
+		TF_ROOT_OBJECT,
+		TF_STATUS_CODE,
+		TF_ACCEPT_FDS,
+		BINDER_TYPE_BINDER,
+		BINDER_TYPE_WEAK_BINDER,
+		BINDER_TYPE_HANDLE,
+		BINDER_TYPE_WEAK_HANDLE,
+		BINDER_TYPE_FD]),,,[ #include <sys/types.h>
 #include <linux/android/binder.h>])])
 
 AC_CHECK_TYPES([struct statfs], [
