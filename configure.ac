@@ -546,6 +546,45 @@ AC_CHECK_TYPES(m4_normalize([
 	struct fib_rule_port_range
 ]),,, [#include <linux/fib_rules.h>])
 
+AC_CHECK_HEADERS([linux/android/binder.h], [[ #include <sys/types.h>
+#include <linux/android/binder.h>])
+	AC_CHECK_DECLS(m4_normalize([BC_TRANSACTION,
+		BC_REPLY,
+		BC_ACQUIRE_RESULT,
+		BC_FREE_BUFFER,
+		BC_INCREFS,
+		BC_ACQUIRE,
+		BC_RELEASE,
+		BC_DECREFS,
+		BC_INCREFS_DONE,
+		BC_ACQUIRE_DONE,
+		BC_ATTEMPT_ACQUIRE,
+		BC_REGISTER_LOOPER,
+		BC_ENTER_LOOPER,
+		BC_EXIT_LOOPER,
+		BC_REQUEST_DEATH_NOTIFICATION,
+		BC_CLEAR_DEATH_NOTIFICATION,
+		BC_DEAD_BINDER_DONE,
+		BR_ERROR,
+		BR_OK,
+		BR_TRANSACTION,
+		BR_REPLY,
+		BR_ACQUIRE_RESULT,
+		BR_DEAD_REPLY,
+		BR_TRANSACTION_COMPLETE,
+		BR_INCREFS,
+		BR_ACQUIRE,
+		BR_RELEASE,
+		BR_DECREFS,
+		BR_ATTEMPT_ACQUIRE,
+		BR_NOOP,
+		BR_SPAWN_LOOPER,
+		BR_FINISHED,
+		BR_DEAD_BINDER,
+		BR_CLEAR_DEATH_NOTIFICATION_DONE,
+		BR_FAILED_REPLY]),,,[ #include <sys/types.h>
+#include <linux/android/binder.h>])])
+
 AC_CHECK_TYPES([struct statfs], [
 	AC_CHECK_MEMBERS(m4_normalize([
 		struct statfs.f_frsize,

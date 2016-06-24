@@ -75,6 +75,7 @@ strace_SOURCES =	\
 	arch_defs.h	\
 	basic_filters.c	\
 	bind.c		\
+	binder.c	\
 	bjm.c		\
 	block.c		\
 	bpf.c		\

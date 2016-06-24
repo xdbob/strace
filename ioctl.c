@@ -309,6 +309,10 @@ ioctl_decode(struct tcb *tcp)
 		return nbd_ioctl(tcp, code, arg);
 	case 'R':
 		return random_ioctl(tcp, code, arg);
+#if defined(HAVE_LINUX_ANDROID_BINDER_H) || defined(__ANDROID__)
+	case 'b':
+		return binder_ioctl(tcp, code, arg);
+#endif
 	default:
 		break;
 	}
