@@ -45,6 +45,7 @@ include $(CLEAR_VARS)
 strace_version := $(shell grep Version $(LOCAL_PATH)/strace.spec | cut -d " " -f 2)
 
 LOCAL_SRC_FILES := \
+	android_compile.c \
 	fstatfs.c \
 	fstatfs64.c \
 	statfs64.c \
